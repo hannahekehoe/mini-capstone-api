@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get "/fountain_pen", controller: "products", action: "fountain_pen"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get "/notebook", controller: "products", action: "notebook"
+
+  get "/stationery_set", controller: "products", action: "stationery_set"
 end
