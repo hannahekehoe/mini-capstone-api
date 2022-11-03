@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  get "/one_product/:id", controller: "products", action: "one_product"
+  get "/products/:id" => "products#show"
 
-  get "/all_products", controller: "products", action: "all_products"
+  get "/products" => "products#index"
 
-  get "/fountain_pen", controller: "products", action: "fountain_pen"
+  post "/products" => "products#create"
 
-  get "/notebook", controller: "products", action: "notebook"
+  # get "/fountain_pen", controller: "products", action: "fountain_pen"
 
-  get "/stationery_set", controller: "products", action: "stationery_set"
+  # get "/notebook", controller: "products", action: "notebook"
+
+  # get "/stationery_set", controller: "products", action: "stationery_set"
 end
