@@ -29,3 +29,6 @@ Content-Type: application/json
   "image_url": "TEST",
   "description": "TEST"
   }
+
+### PRODUCT DESTROY
+DELETE http://localhost:3000/products/6.json
