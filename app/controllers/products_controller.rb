@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def show
     product = Product.find_by(id: params["id"])
-    render json: product.as_json
+    render json: product.as_json(methods: [:friendly_created_at])
   end
 
   def index
@@ -62,4 +62,5 @@ class ProductsController < ApplicationController
   #   products = Product.find_by(name: "Stationery Set")
   #   render json: products.as_json
   # end
+
 end
