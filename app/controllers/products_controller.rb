@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
   def show
     product = Product.find_by(id: params["id"])
-    render json: product.as_json(methods: [:friendly_created_at, :is_discounted?, :tax, :total])
+    @product = product
+    render :show
   end
 
   def index
@@ -29,7 +30,8 @@ class ProductsController < ApplicationController
       description: params["description"],
     )
     product.save
-    render json: product.as_json
+    @product = product
+    render :show
   end
 
   #Updating a variable if the new value doesn't match the original value
