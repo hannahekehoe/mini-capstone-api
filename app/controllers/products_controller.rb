@@ -7,7 +7,8 @@ class ProductsController < ApplicationController
 
   def index
     product = Product.all
-    render json: product.as_json
+    @product = product
+    render :index
   end
 
   #Hard coded version
