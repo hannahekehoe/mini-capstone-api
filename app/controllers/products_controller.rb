@@ -1,14 +1,12 @@
 class ProductsController < ApplicationController
   def show
-    product = Product.find_by(id: params["id"])
-    @product = product
-    render :show
+    @product = Product.find_by(id: params["id"])
+    render :show #must type .json at the end of the path
   end
 
   def index
-    product = Product.all
-    @product = product
-    render :index
+    @products = Product.all
+    render :index #must type .json at the end of the path
   end
 
   #Hard coded version
@@ -29,13 +27,16 @@ class ProductsController < ApplicationController
       price: params["price"],
       image_url: params["image_url"],
       description: params["description"],
-      inventory: params["inventory"]
+      inventory: params["inventory"],
     )
-    if @product.save
-      render :show
-    else
-      render json: (errors: product.errors.full_messages), status: 418
-    end
+    @product.save
+    render json: product.as_json
+    #this doesn't work...
+    # if @product.save
+    #   render :show
+    # else
+    #   render json: (errors: product.errors.full_messages), status: 418
+    # end
   end
 
   #Updating a variable if the new value doesn't match the original value
