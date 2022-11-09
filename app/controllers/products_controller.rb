@@ -24,15 +24,18 @@ class ProductsController < ApplicationController
 
   #Non-hard coded version taking in parameters from end-user
   def create
-    product = Product.new(
+    @product = Product.new(
       name: params["name"],
       price: params["price"],
       image_url: params["image_url"],
       description: params["description"],
+      inventory: params["inventory"]
     )
-    product.save
-    @product = product
-    render :show
+    if @product.save
+      render :show
+    else
+      render json: (errors: product.errors.full_messages), status: 418
+    end
   end
 
   #Updating a variable if the new value doesn't match the original value

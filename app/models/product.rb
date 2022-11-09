@@ -4,6 +4,8 @@ class Product < ApplicationRecord
   validates :price, presence: true
   validates :price, numericality: { greater_than: 0 }
   validates :description, length: { in: 10..500 }
+  validates :image_url, presence: true
+  validates :inventory, numericality: { greater_than: 0 }
 
   def friendly_created_at
     created_at.strftime("%A, %d %b %Y %l:%M %p")
