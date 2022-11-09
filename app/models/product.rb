@@ -11,6 +11,10 @@ class Product < ApplicationRecord
     Supplier.find_by(id: supplier_id)
   end
 
+  def image
+    Product.find_by(id: id)
+  end
+
   def friendly_created_at
     created_at.strftime("%A, %d %b %Y %l:%M %p")
   end

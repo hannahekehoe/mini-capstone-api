@@ -15,7 +15,6 @@ Content-Type: application/json
   {
   "name": "Wax Seal",
   "price": 1.99,
-  "image_url": "TEST",
   "description": "TEST",
   "inventory": "2"
   }
@@ -27,7 +26,6 @@ Content-Type: application/json
   {
   "name": "Wax Seal",
   "price": 15.95,
-  "image_url": "TEST",
   "description": "A seal."
   }
 
