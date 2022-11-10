@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   post "/users" => "users#create"
 
+  post "/sessions" => "sessions#create"
+
   # get "/fountain_pen", controller: "products", action: "fountain_pen"
 
   # get "/notebook", controller: "products", action: "notebook"
