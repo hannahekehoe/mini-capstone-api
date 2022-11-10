@@ -25,12 +25,13 @@ class ProductsController < ApplicationController
     @product = Product.new(
       name: params["name"],
       price: params["price"],
-      image_url: params["image_url"],
       description: params["description"],
       inventory: params["inventory"],
+      supplier_id: params["supplier_id"],
+      images: params["images"],
     )
     @product.save
-    render json: product.as_json
+    render :show
     #this doesn't work...
     # if @product.save
     #   render :show
@@ -44,8 +45,9 @@ class ProductsController < ApplicationController
     product = Product.find_by(id: params["id"])
     product.name = params["name"] || product.name
     product.price = params["price"] || product.price
-    product.image_url = params["image_url"] || product.image_url
     product.description = params["description"] || product.description
+    product.supplier_id = params["supplier_id"] || product.supplier_id
+    product.images = params["images"] || product.images
     product.save
     render json: product.as_json
   end

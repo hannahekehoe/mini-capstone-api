@@ -7,7 +7,6 @@ GET http://localhost:3000/products/1.json
 ### PRODUCTS CREATE HARD-CODED
 # POST http://localhost:3000/products.json
 
-
 ### PRODUCT CREATE NON HARD-CODED
 POST http://localhost:3000/products.json
 Content-Type: application/json
@@ -16,7 +15,8 @@ Content-Type: application/json
   "name": "Wax Seal",
   "price": 1.99,
   "description": "TEST",
-  "inventory": "2"
+  "inventory": "2",
+  "supplier_id": 2
   }
 
 ### PRODUCT UPDATE
@@ -26,7 +26,8 @@ Content-Type: application/json
   {
   "name": "Wax Seal",
   "price": 15.95,
-  "description": "A seal."
+  "description": "A seal.",
+  "supplier_id": 2
   }
 
 ### PRODUCT DESTROY

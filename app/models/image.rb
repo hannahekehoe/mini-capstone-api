@@ -1,5 +1,6 @@
 class Image < ApplicationRecord
-  def products
-    Product.where(id: id)
-  end
+  belongs_to :product
+  # def products
+  #   Product.where(product_id: id)
+  # end
 end

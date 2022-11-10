@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  has_many :images
+  belongs_to :supplier
   # validates :name, presence: true
   # validates :name, uniqueness: true
   # validates :price, presence: true
@@ -7,13 +9,15 @@ class Product < ApplicationRecord
   # validates :image_url, presence: true
   # validates :inventory, numericality: { greater_than: 0 }
 
-  def supplier
-    Supplier.find_by(id: supplier_id)
-  end
+  #see belongs_to method above
+  # def supplier
+  #   Supplier.find_by(id: supplier_id)
+  # end
 
-  def image
-    Product.find_by(id: id)
-  end
+  # see has_many method above
+  # def images
+  #   Image.where(product_id: id)
+  # end
 
   def friendly_created_at
     created_at.strftime("%A, %d %b %Y %l:%M %p")
