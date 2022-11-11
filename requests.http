@@ -53,3 +53,23 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgxOTI0N
   "email": "test@name.com",
   "password": "password"
   }
+
+### ORDERS CREATE
+POST http://localhost:3000/orders.json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgxOTI0Njh9.yGFHO_qe4wFp29suT5JH3P2_73Bwu318Gg-VDgwMR3Q
+
+  {
+  "user_id": 1,
+  "product_id": 1,
+  "quantity": 1,
+  "subtotal": 6, 
+  "tax": 2,
+  "total": 12
+  }
+
+### ORDERS SHOW
+GET http://localhost:3000/orders/1.json
+
+### ORDERS INDEX
+GET http://localhost:3000/orders.json
