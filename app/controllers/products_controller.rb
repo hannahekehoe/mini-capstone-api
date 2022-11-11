@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   end
 
   def index
+    pp current_user
     @products = Product.all
     render :index #must type .json at the end of the path
   end

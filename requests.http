@@ -47,6 +47,7 @@ Content-Type: application/json
 ### SESSIONS CREATE (login)
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgxOTI0Njh9.yGFHO_qe4wFp29suT5JH3P2_73Bwu318Gg-VDgwMR3Q
 
   {
   "email": "test@name.com",
