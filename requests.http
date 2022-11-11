@@ -57,19 +57,19 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgxOTI0N
 ### ORDERS CREATE
 POST http://localhost:3000/orders.json
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgxOTI0Njh9.yGFHO_qe4wFp29suT5JH3P2_73Bwu318Gg-VDgwMR3Q
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgyODA3ODV9.mEuGojzMIohEn_ne0CEa51Iz-BnBLQ_C3L_sJoUxVfQ
 
   {
-  "user_id": 1,
   "product_id": 1,
-  "quantity": 1,
-  "subtotal": 6, 
-  "tax": 2,
-  "total": 12
+  "quantity": 3
   }
 
 ### ORDERS SHOW
 GET http://localhost:3000/orders/1.json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgyODA3ODV9.mEuGojzMIohEn_ne0CEa51Iz-BnBLQ_C3L_sJoUxVfQ
 
 ### ORDERS INDEX
 GET http://localhost:3000/orders.json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgyODA3ODV9.mEuGojzMIohEn_ne0CEa51Iz-BnBLQ_C3L_sJoUxVfQ

@@ -28,6 +28,10 @@ class Product < ApplicationRecord
     price <= 10
   end
 
+  def subtotal
+    subtotal = price * order.quantity
+  end
+
   def tax
     tax = price * 0.08
   end
