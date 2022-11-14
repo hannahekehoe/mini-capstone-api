@@ -16,6 +16,15 @@
 
 # suppliers = Supplier.create(name: "Wonder Fair", email: "wonder@wonderfair.com", phone_number: "222-333-4444")
 
-images = Image.create(url: "http://pilotpen.us/images/products/vpjfpblubbkmt.jpg?t=1667408362")
-images = Image.create(url: "https://static2.jetpens.com/images/a/000/203/203132.jpg?auto=format&ba=middle%2Ccenter&balph=3&blend64=aHR0cDovL3d3dy5qZXRwZW5zLmNvbS9pbWFnZXMvYXNzZXRzL3dhdGVybWFyazIucG5n&bm=difference&bs=inherit&chromasub=444&fm=jpg&h=400&mark64=aHR0cDovL3d3dy5qZXRwZW5zLmNvbS9pbWFnZXMvYXNzZXRzL3dhdGVybWFyazEucG5n&markalign=top%2Cright&markalpha=30&markscale=16&q=90&usm=20&w=600&s=60883fa40b5e5ce35170e2de4f88c84b")
-images = Image.create(url: "https://images.squarespace-cdn.com/content/v1/591a04711e5b6c3701808c11/1533780852478-6MFHSGN07R6Q3BV0TUDI/mode-de-paris-2.jpg?format=1500w")
+# images = Image.create(url: "http://pilotpen.us/images/products/vpjfpblubbkmt.jpg?t=1667408362")
+# images = Image.create(url: "https://static2.jetpens.com/images/a/000/203/203132.jpg?auto=format&ba=middle%2Ccenter&balph=3&blend64=aHR0cDovL3d3dy5qZXRwZW5zLmNvbS9pbWFnZXMvYXNzZXRzL3dhdGVybWFyazIucG5n&bm=difference&bs=inherit&chromasub=444&fm=jpg&h=400&mark64=aHR0cDovL3d3dy5qZXRwZW5zLmNvbS9pbWFnZXMvYXNzZXRzL3dhdGVybWFyazEucG5n&markalign=top%2Cright&markalpha=30&markscale=16&q=90&usm=20&w=600&s=60883fa40b5e5ce35170e2de4f88c84b")
+# images = Image.create(url: "https://images.squarespace-cdn.com/content/v1/591a04711e5b6c3701808c11/1533780852478-6MFHSGN07R6Q3BV0TUDI/mode-de-paris-2.jpg?format=1500w")
+
+# categories = Category.create(name: "Writing Instruments")
+# categories = Category.create(name: "Stationery")
+# categories = Category.create(name: "Accessories")
+
+category_products = CategoryProduct.create(product_id: 1, category_id: 1)
+category_products = CategoryProduct.create(product_id: 2, category_id: 2)
+category_products = CategoryProduct.create(product_id: 3, category_id: 2)
+category_products = CategoryProduct.create(product_id: 4, category_id: 3)
