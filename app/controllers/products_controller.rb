@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
+
   def show
     @product = Product.find_by(id: params["id"])
     render :show #must type .json at the end of the path
@@ -29,7 +31,6 @@ class ProductsController < ApplicationController
       description: params["description"],
       inventory: params["inventory"],
       supplier_id: params["supplier_id"],
-      images: params["images"],
     )
     @product.save
     render :show
