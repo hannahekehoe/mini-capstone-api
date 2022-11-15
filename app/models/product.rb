@@ -3,6 +3,15 @@ class Product < ApplicationRecord
   has_many :images
   belongs_to :supplier
   has_many :category_products
+  has_many :categories, through: :category_products
+
+  ###long method below, shortcut above
+  # def categories
+  #   category_products.map do |category_product|
+  #     category_product.category
+  #   end
+  # end
+
   # validates :name, presence: true
   # validates :name, uniqueness: true
   # validates :price, presence: true
